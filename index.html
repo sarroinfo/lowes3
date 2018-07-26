@@ -62,6 +62,7 @@
 
 	function onEachFeature(feature, layer) {
 		var uagent = navigator.userAgent.toLowerCase();
+		console.log(uagent);
 		if (uagent.search("iphone") > -1 || uagent.search("android") > -1 || uagent.search("blackberry") > -1) > -1){		
 			var popupContent = feature.properties.STORE_NAME + " (#" + feature.properties.STORE_NO + ")" + "<br/>" +
 				"PSE: " + feature.properties.FIRSTNAME + " " + feature.properties.LASTNAME + "<br/>" +
