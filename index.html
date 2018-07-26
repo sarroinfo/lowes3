@@ -59,13 +59,6 @@
 			map.on('locationfound', onLocationFound);
     };
 	
-<!-- 	var baseballIcon = L.icon({
-		iconUrl: 'lowes.png',
-		iconSize: [32, 37],
-		iconAnchor: [16, 37],
-		popupAnchor: [0, -28]
-	}); -->
-
 
 	function onEachFeature(feature, layer) {
 		var popupContent = feature.properties.STORE_NAME + " (#" + feature.properties.STORE_NO + ")" + "<br/>" +
