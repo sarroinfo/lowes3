@@ -61,9 +61,16 @@
 	
 
 	function onEachFeature(feature, layer) {
+
+    if (uagent.search("iphone") > -1 || uagent.search("android") > -1 || uagent.search("blackberry") > -1){
 		var popupContent = feature.properties.STORE_NAME + " (#" + feature.properties.STORE_NO + ")" + "<br/>" +
 				"PSE: " + feature.properties.FIRSTNAME + " " + feature.properties.LASTNAME + "<br/>" +
-				"Cell No: " + feature.properties.CELL_NO;
+				"Cell No: <a href='tel:" + feature.properties.CELL_NO + "'></a>";
+		layer.bindPopup(popupContent);
+	} else {
+		var popupContent = feature.properties.STORE_NAME + " (#" + feature.properties.STORE_NO + ")" + "<br/>" +
+			"PSE: " + feature.properties.FIRSTNAME + " " + feature.properties.LASTNAME + "<br/>" +
+			"Cell No: " + feature.properties.CELL_NO;
 		layer.bindPopup(popupContent);
 	}
 
