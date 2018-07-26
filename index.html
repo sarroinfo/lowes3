@@ -48,12 +48,12 @@
 		if (uagent.search("iphone") > -1 || uagent.search("android") > -1 || uagent.search("blackberry") > -1 || uagent.search("bb10") > -1){		
 			var popupContent = feature.properties.STORE_NAME + " (#" + feature.properties.STORE_NO + ")" + "<br/>" +
 				"PSE: " + feature.properties.FIRSTNAME + " " + feature.properties.LASTNAME + "<br/>" +
-				'Cell No: <a href="tel:' + feature.properties.CELL_NO + '">' + feature.properties.CELL_NO + '</a>' + 
+				'Cell No: <a href="tel:' + feature.properties.CELL_NO + '">' + feature.properties.CELL_NO + "<br/>" + '</a>' + 
 				'Email: <a href="mailto:' + feature.properties.EMAIL + '">' + feature.properties.EMAIL + '</a>';
 		} else {
 			var popupContent = feature.properties.STORE_NAME + " (#" + feature.properties.STORE_NO + ")" + "<br/>" +
 				"PSE: " + feature.properties.FIRSTNAME + " " + feature.properties.LASTNAME + "<br/>" +
-				"Cell No: " + feature.properties.CELL_NO + 
+				"Cell No: " + feature.properties.CELL_NO + "<br/>" + 
 				'Email: <a href="mailto:' + feature.properties.EMAIL + '">' + feature.properties.EMAIL + '</a>';		
 		}
 			layer.bindPopup(popupContent); 
